@@ -18,8 +18,6 @@ Allow: /
 User-agent: AdsBot-Google
 Allow: /
 
-User-agent: GPTBot
-Disallow: /
 
 Sitemap: ${sitemapUrl}
   `.trim();
