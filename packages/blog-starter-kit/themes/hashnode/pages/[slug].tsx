@@ -97,7 +97,7 @@ const Page = ({ page }: PageProps) => {
 		<>
 			<Head>
 				<title>{title}</title>
-				<link rel="canonical" href={page.slug} />
+				<link rel="canonical" href={`https://immilang.com/blog/${page.slug}`} />
 			</Head>
 			<div className="blog-page-area mx-auto min-h-screen px-4 py-8 md:w-2/3 md:p-10">
 				<StaticPageContent pageContent={page} />
@@ -130,6 +130,7 @@ export default function PostOrPage(props: Props) {
 						)}
 					>
 						<PostPageNavbar publication={publication} ref={headerRef} />
+						<link rel="canonical" href={publication.url} />
 					</header>
 					<Container>
 						<article className="flex flex-col items-start gap-10 pb-10">
