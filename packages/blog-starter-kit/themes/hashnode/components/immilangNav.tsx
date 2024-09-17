@@ -32,11 +32,11 @@ const ImmilangNav: React.FC = () => {
 					<Link href="https://www.immilang.com" className="flex gap-2">
 						<Image
 							className="h-8 w-auto object-contain lg:h-10"
-							src={'/assets/transparentlogo.png'}
+							src="/assets/transparentlogo.png"
 							width={40}
 							height={40}
-							alt={'ImmiLang Logo'}
-							loading="lazy"
+							alt="ImmiLang Logo"
+							priority
 						/>
 						<p className="mt-1 text-xl font-bold text-white md:text-3xl lg:text-3xl xl:text-3xl">
 							ImmiLang
