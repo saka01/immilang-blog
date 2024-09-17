@@ -32,7 +32,7 @@ const HeaderBlogSearch = (props: Props) => {
         variant="search"
         btnRef={triggerRef}
       >
-        <SearchSVG className="h-6 w-6 stroke-current" />
+      <span className="text-sm mr-2">Search</span> <SearchSVG className="h-6 w-6 stroke-current" />
       </CommonHeaderIconBtn>
     </>
   );

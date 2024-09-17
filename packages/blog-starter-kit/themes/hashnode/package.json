@@ -31,6 +31,7 @@
 		"html-react-parser": "^4.2.2",
 		"js-cookie": "^3.0.5",
 		"lodash": "^4.17.21",
+		"lucide-react": "^0.441.0",
 		"mongodb": "3.7.3",
 		"next-axiom": "0.18.0",
 		"next-urql": "5.0.2",
