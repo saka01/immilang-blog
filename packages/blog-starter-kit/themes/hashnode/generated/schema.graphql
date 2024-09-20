@@ -2962,6 +2962,10 @@ type Mutation {
   """Removes a comment from a post."""
   removeComment(input: RemoveCommentInput!): RemoveCommentPayload!
   removeDocumentationGuide(input: RemoveDocumentationGuideInput!): RemoveDocumentationGuidePayload!
+  """
+  Mutation to remove a documentation project. This will free the custom domain and subdomain and removes all guides and pages.
+  """
+  removeDocumentationProject(input: RemoveDocumentationProjectInput!): RemoveDocumentationProjectPayload!
   """Mutation to remove a prompt from the AI search"""
   removeDocumentationProjectAIPrompt(input: RemoveDocumentationProjectAIPromptInput!): RemoveDocumentationProjectAIPromptPayload!
   removeDocumentationProjectCustomDomain(input: RemoveDocumentationProjectCustomDomainInput!): RemoveDocumentationProjectCustomDomainPayload!
@@ -4748,6 +4752,12 @@ type RemoveDocumentationProjectCustomDomainPayload {
   project: DocumentationProject
 }
 
+"""The input for removing a documentation project."""
+input RemoveDocumentationProjectInput {
+  """The ID of the documentation project that should be removed."""
+  projectId: ID!
+}
+
 """The input for the removal of a member from a documentation"""
 input RemoveDocumentationProjectMemberInput {
   projectId: ID!
@@ -4757,6 +4767,12 @@ input RemoveDocumentationProjectMemberInput {
 type RemoveDocumentationProjectMemberPayload {
   project: DocumentationProject
   removedMember: DocumentationProjectMember
+}
+
+"""The payload for removing a documentation project."""
+type RemoveDocumentationProjectPayload {
+  """The documentation project that was removed."""
+  project: DocumentationProject
 }
 
 input RemoveDocumentationSidebarItemInput {

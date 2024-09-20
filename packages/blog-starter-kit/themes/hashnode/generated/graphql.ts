@@ -2975,6 +2975,8 @@ export type Mutation = {
   /** Removes a comment from a post. */
   removeComment: RemoveCommentPayload;
   removeDocumentationGuide: RemoveDocumentationGuidePayload;
+  /** Mutation to remove a documentation project. This will free the custom domain and subdomain and removes all guides and pages. */
+  removeDocumentationProject: RemoveDocumentationProjectPayload;
   /** Mutation to remove a prompt from the AI search */
   removeDocumentationProjectAIPrompt: RemoveDocumentationProjectAiPromptPayload;
   removeDocumentationProjectCustomDomain: RemoveDocumentationProjectCustomDomainPayload;
@@ -3280,6 +3282,11 @@ export type MutationRemoveCommentArgs = {
 
 export type MutationRemoveDocumentationGuideArgs = {
   input: RemoveDocumentationGuideInput;
+};
+
+
+export type MutationRemoveDocumentationProjectArgs = {
+  input: RemoveDocumentationProjectInput;
 };
 
 
@@ -5304,6 +5311,12 @@ export type RemoveDocumentationProjectCustomDomainPayload = {
   project?: Maybe<DocumentationProject>;
 };
 
+/** The input for removing a documentation project. */
+export type RemoveDocumentationProjectInput = {
+  /** The ID of the documentation project that should be removed. */
+  projectId: Scalars['ID']['input'];
+};
+
 /** The input for the removal of a member from a documentation */
 export type RemoveDocumentationProjectMemberInput = {
   projectId: Scalars['ID']['input'];
@@ -5314,6 +5327,13 @@ export type RemoveDocumentationProjectMemberPayload = {
   __typename?: 'RemoveDocumentationProjectMemberPayload';
   project?: Maybe<DocumentationProject>;
   removedMember?: Maybe<DocumentationProjectMember>;
+};
+
+/** The payload for removing a documentation project. */
+export type RemoveDocumentationProjectPayload = {
+  __typename?: 'RemoveDocumentationProjectPayload';
+  /** The documentation project that was removed. */
+  project?: Maybe<DocumentationProject>;
 };
 
 export type RemoveDocumentationSidebarItemInput = {
