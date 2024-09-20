@@ -37,6 +37,7 @@ const ImmilangNav: React.FC = () => {
 							height={40}
 							alt="ImmiLang Logo"
 							priority
+							unoptimized
 						/>
 						<p className="mt-1 text-xl font-bold text-white md:text-3xl lg:text-3xl xl:text-3xl">
 							ImmiLang

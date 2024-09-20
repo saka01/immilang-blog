@@ -71,6 +71,7 @@ const config = {
 				hostname: 'cdn.hashnode.com',
 			},
 		],
+		domains: ['www.immilang.com', 'immilang.com'],
 	},
 	async rewrites() {
 		return [
