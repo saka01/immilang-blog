@@ -22,7 +22,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 		SitemapDocument,
 		{
 			host: process.env.NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST,
-			postsCount: 20,
+			postsCount: 50,
 			staticPagesCount: 50,
 		},
 	);
@@ -40,7 +40,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 	const fetchPosts = async (after: string | null | undefined) => {
 		const variables = {
 			host: process.env.NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST,
-			postsCount: 20,
+			postsCount: 50,
 			postsAfter: after,
 		};
 
